@@ -1,0 +1,1080 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:8px 50px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    text-shadow: 0 0 5px #000;
+
+}
+#check {
+    display: none;
+}
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* Base styles for the anchor tags */
+/* Styling for the navigation links */
+nav a {
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    position: relative; /* Allows for positioning of the animation */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Hover effect with animation */
+nav .anim8:hover {
+    color: #ffd700; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+    letter-spacing: 1px; /* Increase letter spacing on hover */
+}
+
+/* Optional: Add a subtle underline effect on hover */
+nav .anim8::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700; /* Underline color */
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav .anim8:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+#main-cont {
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+}
+.cont1 #main-cont h1 {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: default;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+#main-cont h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 21px;
+    cursor: default;
+}
+#button-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.animate-flick {
+    position: absolute;
+    top: 76%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 7rem;
+    opacity: .6;
+    animation: flickerAnimation 3s infinite;
+    color: #fff;
+    font-weight: 200;
+}
+@keyframes flickerAnimation {
+    0%   { opacity:.8; }
+    50%  { opacity:0; }
+    100% { opacity:.8; }
+  }
+
+
+#button-text a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    outline: 1px solid #fff;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    transition: all ease .3s;
+}
+
+
+#button-text a:hover{
+    transition: all ease .3s;
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 5px;
+}
+
+
+/* ID */
+#ser-txt {
+    color: #fff;
+    background-color: #ffd90088;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 0 ;
+}
+#ser-txt:hover {
+    transition: all ease .3s;
+     box-shadow: 0 0 5px;
+}
+
+#logo {
+    border-radius: 50px;
+}
+
+#get-txt{
+    background-color: rgba(74, 70, 70, 0.918);
+}
+
+
+header {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 0.6s ease;
+}
+
+header nav a {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.wrapper {
+    position: relative; /* Ensures the pseudo-element is positioned relative to the wrapper */
+    padding: 80px 20px 0 20px;
+    background: #0e0d1f;
+    height: 100vh; /* Prevents the pseudo-element from overflowing the wrapper */
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+.side-image{
+    background-image: url("./img/mainbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.row{
+  width:  850px;
+  height: 610px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text h1{
+    color: #fffffffd;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 7px;
+    font-size: 36px; 
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.text p {
+    color:#fff;
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input-box{
+  width: 350px;
+  box-sizing: border-box;
+}
+.imgs-cnfg{
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.input-box h1{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+.input-field select {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+    appearance: none; /* Remove default dropdown styling */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+    padding-right: 30px; /* Add space for the icon */
+    font-size: 16px;
+}
+.input-field i {
+    position: absolute;
+    right: 10px; /* Position the icon on the right */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Adjust the size of the icon */
+    color: #40414a; /* Match the color of the text */
+    pointer-events: none; /* Ensure the icon doesn't interfere with clicking the select */
+}
+
+
+.input-field select:focus {
+    border-bottom: 1px solid #743ae1;
+}
+
+.input-box .input-field label{
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 12px;
+  }
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 11px;
+   color: #5d5076;
+ }
+
+
+.input-field select::-ms-expand {
+    display: none; /* Hide default dropdown arrow in IE/Edge */
+}
+
+.input-field select::after {
+    content: ' ▼'; /* Add custom arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #40414a;
+    pointer-events: none;
+}
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+ }
+
+
+/* Add some spacing between fields */
+.terms {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Style the link */
+.terms a {
+    color: #743ae1; /* Matching theme color */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.terms a:hover {
+    color: #5d5076; /* Slightly different shade on hover */
+    text-decoration: underline;
+}
+
+
+
+ .submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    color: #fff;
+    background: #0e0d1f;
+    border-radius: 5px;
+    transition: .4s;
+ }
+ .submit:hover{
+    background: rgba(16, 52, 88, 0.808);
+    color: #fff;
+ }
+ .signin{
+    
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+.signin .text-forgotpwd {
+    text-decoration: none;
+}
+.signin .text-forgotpwd:hover {
+    text-decoration: underline;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p, i{
+        font-size: 16px;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
+}
+
+@media (max-width:770px) {
+    .icons {
+        display: inline-flex;
+        text-shadow: #000 0 0 2px;
+    }
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+    .icons #close-icon {
+        display: none;
+
+    }
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+    header {
+        position: fixed;
+    }
+    nav {
+        position: fixed;
+        width: 95%;
+        height: 0;
+        top: 90%;
+        left: 2.5%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, .9);
+        backdrop-filter: blur(50px);
+        border-radius: 10px;
+        box-shadow: #fff 0 0 3px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: ease .5s;
+
+    }
+    nav a {
+        opacity: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 90%;
+        text-align:center;
+    }
+    #check:checked~nav {
+        position: fixed;
+        width: 95%;
+        height: 400px;
+        padding: 20px;
+    }
+
+    #navbr-icon {
+        position: fixed;
+        width: 15%;
+        height: 0;
+        top: 74%;
+        left: 83%;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(50px);
+        border-radius: 0 0 10px 10px;
+        box-shadow: #fff 0 0 3px ;
+        transition: ease .5s;
+    }
+    #navbr-icon i {
+        color:#fff;
+    }
+    #check:checked~#navbr-icon {
+        position: fixed;
+        width: 15%;
+        height: 350px;
+    }
+}
+@media (max-width:673px) {
+    .animate-flick {
+        top: 87%;
+        font-size: 5rem;
+    }
+}
+
+@media (max-width:581px) {
+    .animate-flick {
+        top: 87%;
+        font-size: 5rem;
+    }
+}
+
+
+@media (max-width:541px) {
+    .animate-flick {
+        top: 87%;
+        font-size: 5rem;
+    }
+}
+@media (max-width:500px) {
+    header {
+        padding: 8px 20px;
+    }
+}
+
+footer {
+    background-color: rgba(0, 0, 255, 0.781);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:8px 50px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    text-shadow: 0 0 5px #000;
+
+}
+#check {
+    display: none;
+}
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* Base styles for the anchor tags */
+/* Styling for the navigation links */
+nav a {
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    position: relative; /* Allows for positioning of the animation */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Hover effect with animation */
+nav .anim8:hover {
+    color: #ffd700; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+    letter-spacing: 1px; /* Increase letter spacing on hover */
+}
+
+/* Optional: Add a subtle underline effect on hover */
+nav .anim8::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700; /* Underline color */
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav .anim8:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+#main-cont {
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+}
+.cont1 #main-cont h1 {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: default;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+#main-cont h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 21px;
+    cursor: default;
+}
+#button-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.animate-flick {
+    position: absolute;
+    top: 76%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 7rem;
+    opacity: .6;
+    animation: flickerAnimation 3s infinite;
+    color: #fff;
+    font-weight: 200;
+}
+@keyframes flickerAnimation {
+    0%   { opacity:.8; }
+    50%  { opacity:0; }
+    100% { opacity:.8; }
+  }
+
+
+#button-text a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    outline: 1px solid #fff;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    transition: all ease .3s;
+}
+
+
+#button-text a:hover{
+    transition: all ease .3s;
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 5px;
+}
+
+
+/* ID */
+#ser-txt {
+    color: #fff;
+    background-color: #ffd90088;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 0 ;
+}
+#ser-txt:hover {
+    transition: all ease .3s;
+     box-shadow: 0 0 5px;
+}
+
+#logo {
+    border-radius: 50px;
+}
+
+#get-txt{
+    background-color: rgba(74, 70, 70, 0.918);
+}
+
+
+header {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 0.6s ease;
+}
+
+header nav a {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.wrapper {
+    position: relative; /* Ensures the pseudo-element is positioned relative to the wrapper */
+    padding: 80px 20px 0 20px;
+    background: #0e0d1f;
+    height: 100vh; /* Prevents the pseudo-element from overflowing the wrapper */
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+.side-image{
+    background-image: url("./img/mainbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.row{
+  width:  850px;
+  height: 610px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text h1{
+    color: #fffffffd;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 7px;
+    font-size: 36px; 
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+.text p {
+    color:#fff;
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input-box{
+  width: 350px;
+  box-sizing: border-box;
+}
+.imgs-cnfg{
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.input-box h1{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+.input-field select {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+    appearance: none; /* Remove default dropdown styling */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+    padding-right: 30px; /* Add space for the icon */
+    font-size: 16px;
+}
+.input-field i {
+    position: absolute;
+    right: 10px; /* Position the icon on the right */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Adjust the size of the icon */
+    color: #40414a; /* Match the color of the text */
+    pointer-events: none; /* Ensure the icon doesn't interfere with clicking the select */
+}
+
+
+.input-field select:focus {
+    border-bottom: 1px solid #743ae1;
+}
+
+.input-box .input-field label{
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field input:focus ~ label
+   {
+    top: -10px;
+    font-size: 12px;
+  }
+  .input-field input:valid ~ label
+  {
+   top: -10px;
+   font-size: 11px;
+   color: #5d5076;
+ }
+
+
+.input-field select::-ms-expand {
+    display: none; /* Hide default dropdown arrow in IE/Edge */
+}
+
+.input-field select::after {
+    content: ' ▼'; /* Add custom arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #40414a;
+    pointer-events: none;
+}
+ .input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+ }
+
+
+/* Add some spacing between fields */
+.terms {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Style the link */
+.terms a {
+    color: #743ae1; /* Matching theme color */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.terms a:hover {
+    color: #5d5076; /* Slightly different shade on hover */
+    text-decoration: underline;
+}
+
+
+
+ .submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    color: #fff;
+    background: #0e0d1f;
+    border-radius: 5px;
+    transition: .4s;
+ }
+ .submit:hover{
+    background: rgba(16, 52, 88, 0.808);
+    color: #fff;
+ }
+ .signin{
+    
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+.signin .text-forgotpwd {
+    text-decoration: none;
+}
+.signin .text-forgotpwd:hover {
+    text-decoration: underline;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p, i{
+        font-size: 16px;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
+}
+
+@media (max-width:770px) {
+    .icons {
+        display: inline-flex;
+        text-shadow: #000 0 0 2px;
+    }
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+    .icons #close-icon {
+        display: none;
+
+    }
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+    header {
+        position: fixed;
+    }
+    nav {
+        position: fixed;
+        width: 95%;
+        height: 0;
+        top: 90%;
+        left: 2.5%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, .9);
+        backdrop-filter: blur(50px);
+        border-radius: 10px;
+        box-shadow: #fff 0 0 3px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: ease .5s;
+
+    }
+    nav a {
+        opacity: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 90%;
+        text-align:center;
+    }
+    #check:checked~nav {
+        position: fixed;
+        width: 95%;
+        height: 400px;
+        padding: 20px;
+    }
+
+    #navbr-icon {
+        position: fixed;
+        width: 15%;
+        height: 0;
+        top: 74%;
+        left: 83%;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(50px);
+        border-radius: 0 0 10px 10px;
+        box-shadow: #fff 0 0 3px ;
+        transition: ease .5s;
+    }
+    #navbr-icon i {
+        color:#fff;
+    }
+    #check:checked~#navbr-icon {
+        position: fixed;
+        width: 15%;
+        height: 350px;
+    }
+}
+@media (max-width:673px) {
+    .animate-flick {
+        top: 87%;
+        font-size: 5rem;
+    }
+}
+
+@media (max-width:581px) {
+    .animate-flick {
+        top: 87%;
+        font-size: 5rem;
+    }
+}
+
+
+@media (max-width:541px) {
+    .animate-flick {
+        top: 87%;
+        font-size: 5rem;
+    }
+}
+@media (max-width:500px) {
+    header {
+        padding: 8px 20px;
+    }
+}
+
+footer {
+    background-color: rgba(0, 0, 255, 0.781);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    overflow-x: hidden;
+}
